@@ -1,0 +1,40 @@
+\newenvironment{bulleted-list}
+{
+    \begin{itemize}
+}
+{
+    \end{itemize}
+}
+
+\newenvironment{problems}
+{
+    \subsection{Problems}
+    \begin{enumerate}
+}
+{
+    \end{enumerate}
+}
+
+\newenvironment{solutions}
+{
+    \subsection{Solutions}
+    \begin{enumerate}
+}
+{
+    \end{enumerate}
+}
+
+\def\sampleT{\par\bigskip\setbox0=\hbox{\bf Sample: }%
+   \noindent \hangindent=\wd0 \box0 \ignorespaces}
+
+\def\answerT{\par\setbox0=\hbox{\bf Answer: }%
+   \noindent \hangindent=\wd0 \box0 \ignorespaces}
+
+\newenvironment{sample}[1]
+{
+    \sampleT
+    #1
+
+    \answerT
+}
+{\bigskip\par}

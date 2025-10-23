@@ -1,0 +1,91 @@
+\usepackage{thmtools}
+\usepackage[most]{tcolorbox}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily, 
+    bodyfont=\normalfont, 
+    mdframed={
+        nobreak,
+        leftline=false, rightline=false, topline=false, bottomline=false,
+        backgroundcolor=gray!15,
+    }
+]{important-style}
+\declaretheorem[style=important-style,name=Important,numbered=no]{important}
+
+\newmdenv[
+    backgroundcolor=cyan!5,
+    linewidth=0pt,
+    innertopmargin=0pt,
+    innerbottommargin=10pt,
+    innerleftmargin=10pt,
+    innerrightmargin=10pt,
+    skipabove=10pt,
+    skipbelow=10pt,
+    roundcorner=0pt,
+    frametitlefont=\bfseries,
+    frametitlealignment=\centering,
+    frametitlebackgroundcolor=cyan!5,
+    nobreak=true
+]{definition-theorem}
+
+\newenvironment{definition}[1]{%
+  \begin{center}
+  \begin{minipage}{0.8\textwidth} % Set the width to 80% of the text width
+  \begin{definition-theorem}[frametitle=#1]
+}{%
+  \end{definition-theorem}
+  \end{minipage}
+  \end{center}
+}
+
+% \usepackage{thmtools}
+% \usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[most]{tcolorbox}
+% \usepackage{graphicx}
+% \usepackage[framemethod=TikZ]{mdframed}
+
+% note
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{ProcessBlue!70!black}, bodyfont=\normalfont,
+%     headpunct= :,
+%     mdframed={
+%         linewidth=1pt,
+%         rightline=false, 
+%         topline=false, 
+%         bottomline=false,
+%         linecolor=ProcessBlue, 
+%         backgroundcolor=ProcessBlue!0,
+%         innerbottommargin=10pt
+%     }
+% ]{note}
+% \declaretheorem[style=note,name=Note,numbered=no]{note}
+
+% solution
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{NavyBlue!70!black}, 
+%     bodyfont=\normalfont,
+%     % headpunct=,
+%     mdframed={
+%         linewidth=1pt,
+%         rightline=false, 
+%         topline=false, 
+%         bottomline=false, 
+%         linecolor=NavyBlue, 
+%         innerbottommargin=5pt
+%     }
+% ]{solution}
+% \declaretheorem[style=solution,name=Solution,numbered=no]{solution}
+
+% definition
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily, 
+%     bodyfont=\normalfont, 
+%     mdframed={
+%         nobreak,
+%         linewidth=1pt,
+%         % innerbottommargin=10pt,
+%         rightline=false, topline=false, bottomline=false,
+%     }
+% ]{definition}
+% \declaretheorem[style=definition,name=Definition,numberwithin=chapter]{definition}

@@ -1,0 +1,67 @@
+\lesson{Angular Position, Velocity, and Acceleration}
+The \textbf{angular position} is described by
+\[
+    s=r\theta
+\]
+Where $s$ is the arc length, $r$ is the radius, and $\theta$ is the angle.\\
+
+The \textbf{average angular speed} $\omega_\text{avg}$ is
+\[
+    \omega_\text{avg}=\frac{\Delta\theta}{\Delta t}
+\]
+The \textbf{instantaneous angular speed} $\omega$ is
+\[
+    \omega=\lim_{\Delta t\to0}\frac{\Delta\theta}{\Delta t}=\frac{d\theta}{dt}
+\]
+Furthermore, the \textbf{average angular acceleration} is
+\[
+    \alpha_\text{avg}=\frac{\Delta\omega}{\Delta t}=\frac{\omega_f-\omega_i}{t_f-t_i}
+\]
+The \textbf{instantaneous angular acceleration} is
+\[
+    \alpha=\lim_{t\to0}\frac{\Delta\omega}{\Delta t}=\frac{d\omega}{dt}
+\]
+
+\subsection{Rotational Kinetmatic Equations}
+Through integration, one can derive that the final angular speed is
+\[
+    \omega_f=\omega_i+\alpha t\quad\text{(for constant $\alpha$)}
+\]
+And likewise, the angular position is
+\[
+    \theta_f=\theta_i+\omega_it+\frac{1}{2}\alpha t^2\quad\text{(for constant $\alpha$)}
+\]
+where $\theta_i$ is the angular position at time $t=0$.t can also be derived that
+\[
+    \omega_f^2=\omega_i^2+2\alpha(\theta_f-\theta_i)\quad\text{(for constant $\alpha$)}
+\]
+And if you were to determine angular position in terms of average angular speed
+\begin{align*}
+    \theta_f&=\theta_i+\omega_\text{avg}t\\
+    &=\theta_i+\frac{1}{2}(\omega_i+\omega_i)t
+\end{align*}
+
+\subsection{Angular and Translational Quantities}
+The tangential velocity is measured as $v=\frac{ds}{dt}$, where $s$ is the distance traveled by
+the point measured along the circular path. Since $s=r\theta$
+\begin{align*}
+    v&=\frac{ds}{dt}\\
+    &=r \frac{d\theta}{dt}\\
+    &=r\omega
+\end{align*}
+Similarly, for tangential acceleration
+\begin{align*}
+    a_t&=\frac{dv}{dt}\\
+    &=r\frac{d\omega}{dt}\\
+    &=r\alpha
+\end{align*}
+In the case of centripetal acceleration, since we now have an equation for tangential velocity
+\begin{align*}
+    a_c&=\frac{v^2}{r}\\
+    &=\frac{r^2\omega^2}{r}\\
+    &=r\omega^2
+\end{align*}
+Note that the total acceleration is $\vect{a}=\vect{a_t}+\vect{a_c}$, hence the magnitude is
+\[
+    a=\sqrt{a_t^2+a_c^2}=\sqrt{r^2\alpha^2+r^2\omega^4}=r \sqrt{\alpha^2+\omega^4}
+\]

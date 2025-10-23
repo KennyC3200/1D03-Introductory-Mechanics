@@ -1,0 +1,40 @@
+\lesson{Significant Figures}
+Keep in mind that for the following examples, it applies to an unlimited number of variables, not
+just three (x, y, z).
+
+\subsection{Addition or Subtraction}
+\[
+    f(x,y,z)=x+y+z\to\delta f(x,y,z)=\sqrt{\delta x^2+\delta y^2+\delta z^2}
+\]
+
+\subsection{Multiplication or Division}
+\[
+    f(x,y,z)=\frac{xy}{z}\to \frac{\delta f}{|f|}=\sqrt{\left(\frac{\delta x}{|x|}\right)^2+\left(\frac{\delta y}{|y|}\right)^2+ \left(\frac{\delta z}{|z|}\right)^2}
+\]
+
+\subsection{Multiplication or division by a constant, c}
+\[
+    f(x)=cx\to\delta f=c\delta x
+\]
+
+\subsection{Exponents}
+\[
+    f(x)=x^n\to \frac{\delta f}{|f|}=|n|\frac{\delta x}{|x|}
+\]
+
+\subsection{Special Functions}
+\begin{enum}
+    \item $f(x)=\sin(x)\to\delta f=\cos(x)\delta x$
+    \item $f(x)=e^x\to\delta f=e^x\delta x$
+    \item $f(x)=\ln(cx)\to\delta f=\frac{1}{|x|}\delta x$
+    \item $f(x)=\log_{10}(x)=\frac{\ln(x)}{\ln(10)}=0.43\ln(x)\to\delta f=\frac{0.43}{|x|}\delta x$
+\end{enum}
+
+\subsection{Average}
+\[
+    f(x)=\tilde{x}\to\delta f=\sigma=\sqrt{\frac{1}{N-1}\Sigma_{i=1}^N(x_i-\tilde{x})^2}
+\]
+Where $\sigma$ is the standard deviation. Standard error of mean (if $N\geq5$)
+\[
+    SE=\frac{\sigma}{\sqrt{N}}
+\]

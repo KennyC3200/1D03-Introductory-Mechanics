@@ -1,0 +1,15 @@
+src/figures/shrek.png
+src/test/
+.DS_Store
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.pdf
+*.toc
+*.out
+*.latexmain
+
+!res/equilibrium.pdf
