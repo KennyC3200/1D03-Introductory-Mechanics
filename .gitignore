@@ -7,7 +7,6 @@ src/test/
 *.fls
 *.log
 *.synctex.gz
-*.pdf
 *.toc
 *.out
 *.latexmain
