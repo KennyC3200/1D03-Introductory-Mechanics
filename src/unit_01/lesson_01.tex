@@ -2,6 +2,12 @@
 Keep in mind that for the following examples, it applies to an unlimited number of variables, not
 just three (x, y, z).
 
+\subsection{General Formula for Propogating Uncertainties}
+Given $q=f(x,y,\dots,z)$
+\[
+    \delta q=\sqrt{\left(\frac{\partial f}{\partial x}\delta x\right)^2+\left(\frac{\partial f}{\partial y}\delta y\right)^2+\dots+\left(\frac{\partial f}{\partial z}\delta z\right)^2}
+\]
+
 \subsection{Addition or Subtraction}
 \[
     f(x,y,z)=x+y+z\to\delta f(x,y,z)=\sqrt{\delta x^2+\delta y^2+\delta z^2}
@@ -32,7 +38,7 @@ just three (x, y, z).
 
 \subsection{Average}
 \[
-    f(x)=\tilde{x}\to\delta f=\sigma=\sqrt{\frac{1}{N-1}\Sigma_{i=1}^N(x_i-\tilde{x})^2}
+    f(x)=\tilde{x}\to\delta f=\sigma=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(x_i-\tilde{x})^2}
 \]
 Where $\sigma$ is the standard deviation. Standard error of mean (if $N\geq5$)
 \[

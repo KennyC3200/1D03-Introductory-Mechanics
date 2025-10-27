@@ -23,34 +23,34 @@ $\vect{F}$, called the \textbf{moment arm} (or \textit{lever arm}) of $\vect{F}$
 \subsection{Rigid Object Under a Net Torque and Moment of Inertia}
 For a particle with mass $m$ rotating in a circle of radius $r$
 \[
-    \Sigma F_t=ma_t
+    \sum F_t=ma_t
 \]
 The net torque is
 \[
-    \Sigma\tau=\Sigma F_tr=(ma_t)r
+    \sum\tau=\sum F_tr=(ma_t)r
 \]
 But recalling that $a_t=r\alpha$
 \begin{align*}
-    \Sigma\tau&=(mr\alpha)r\\
+    \sum\tau&=(mr\alpha)r\\
     &=(mr^2)\alpha\\
-    \Sigma\tau&=I\alpha
+    \sum\tau&=I\alpha
 \end{align*}
 Where we let $I=mr^2$. The quantity $I$ is called the \textbf{moment of inertia}. For a given rigid
 body that is made up of a collection of particles, even though they may have different translational
 accelerations $a_i$, they all have the \textit{same} angular acceleration $\alpha$. Therefore
 \begin{align*}
-    \Sigma \tau_\text{ext}&=\Sigma_i\tau_i\\
-    &=\Sigma_im_ir_i^2\alpha\\
-    &=(\Sigma_im_ir_i^2)\alpha\\
+    \sum \tau_\text{ext}&=\sum\tau_i\\
+    &=\sum mr^2\alpha\\
+    &=(\sum_im_ir_i^2)\alpha\\
     &=I\alpha
 \end{align*}
 Where
 \[
-    I=\Sigma_im_ir_i^2
+    I=\sum_im_ir_i^2
 \]
 Notice that this equation has the same form as Newton's second law for a system of particles
 \[
-    \Sigma\vect{F}_\text{ext}=M\vect{a}_\text{CM}
+    \sum\vect{F}_\text{ext}=M\vect{a}_\text{CM}
 \]
 Consequently, the moment of inertia $I$ must lay the same role in rotational motion as the role
 that mass plays in translational motion: the moment of inertia is the resistance to changes in
@@ -66,7 +66,7 @@ rotational motion. See Figure \ref{fig:moments-of-inertia}.
 \subsection{Deriving Moments of Inertia for Geometries}
 Because the moment of inertia for a rigid body is defined to be
 \[
-    I=\Sigma_im_ir_i^2
+    I=\sum_im_ir_i^2
 \]
 If we were to consider for an infinitesimal number of particles that make up that rigid body, the
 summation simplifies to become
